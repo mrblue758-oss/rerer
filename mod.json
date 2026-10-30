@@ -1,0 +1,69 @@
+{
+    "geode": "5.8.2",
+    "gd": {
+        "win": "*",
+        "android": "*",
+        "mac": "*",
+        "ios": "*"
+    },
+    "id": "tunombre.auto-deco",
+    "name": "Auto Deco",
+    "version": "v0.1.0",
+    "developer": "tunombre",
+    "description": "Decora tus niveles solo desde el editor. V0.1: estilo Nine Circles.",
+    "tags": ["editor", "utility"],
+    "settings": {
+        "color-chase": {
+            "type": "bool",
+            "default": true,
+            "name": "Pulso de color (chase)",
+            "description": "Agrega triggers de color que prenden/apagan los 3 canales de la deco como en tu nivel de prueba. Si lo apagas, quedan 3 colores fijos."
+        },
+        "chase-step": {
+            "type": "int",
+            "default": 60,
+            "min": 15,
+            "max": 600,
+            "name": "Distancia entre pulsos",
+            "description": "Unidades entre cada pulso de color (60 = como tu nivel de prueba)."
+        },
+        "halo-density": {
+            "type": "float",
+            "default": 1.0,
+            "min": 0.0,
+            "max": 2.0,
+            "name": "Densidad de la aureola",
+            "description": "1.0 = misma cobertura que tu deco de referencia. Mas alto = mas deco alrededor de los bloques."
+        },
+        "skip-existing-deco": {
+            "type": "bool",
+            "default": true,
+            "name": "No apilar sobre deco existente",
+            "description": "Evita poner deco encima de la deco que ya hiciste a mano."
+        },
+        "max-objects": {
+            "type": "int",
+            "default": 0,
+            "min": 0,
+            "max": 1000000,
+            "name": "Tope de objetos a agregar",
+            "description": "0 = sin limite."
+        },
+        "seed": {
+            "type": "int",
+            "default": 1,
+            "min": 0,
+            "max": 99999,
+            "name": "Semilla",
+            "description": "Cambiala para obtener otra variacion (rotaciones y colores)."
+        },
+        "marker-group": {
+            "type": "int",
+            "default": 9999,
+            "min": 1,
+            "max": 9999,
+            "name": "Grupo marcador",
+            "description": "Grupo que se asigna a TODO lo que agrega el mod, para poder reemplazarlo o quitarlo. Usa uno que no uses en tu nivel."
+        }
+    }
+}
